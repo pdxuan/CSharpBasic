@@ -17,11 +17,10 @@ namespace CSharpBasic
         {
             Console.WriteLine("Hello, World!");
 
-
             // Lesson1: CSharp type system and Datatypes
             DataTypeDemo.DataTypesDemo();
             DataTypeDemo.DoTypeSystemDemo();
-
+            DataTypeDemo.CheckPerfomanceStringTypeDemo();
 
             // Lesson2: Operator, Expressions & Control structures
 

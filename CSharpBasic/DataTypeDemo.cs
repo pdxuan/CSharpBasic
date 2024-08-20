@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Drawing;
 using System.Linq;
 using System.Text;
@@ -15,6 +16,7 @@ namespace CSharpBasic
 
         /// <summary>
         /// https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/
+        /// https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/built-in-types
         /// Data types and Variables sample code 
         /// Variables are used to store data in a program. In C#, you declare a variable by specifying its data type and a name.
         /// </summary>
@@ -57,11 +59,25 @@ namespace CSharpBasic
 
         /// <summary>
         /// Demo CSharp type system and data types
+        /// https://learn.microsoft.com/en-us/dotnet/standard/base-types/common-type-system
         /// </summary>
         public static void DoTypeSystemDemo()
         {
 
             // Value Types vs. Reference Types
+            // Value types: Directly contain their data and are stored on the stack. Common example include Primitives types, struct, Enum
+            // Reference types: Store references to their data, which is stored on the heap  - Common example include Interfaces, Classes, Array , String, delegate
+            int[] array1 = { 1, 2, 3 };
+            int[] array2 = array1;
+
+            Console.WriteLine("Reference Types Before change:");
+            Console.WriteLine("Array1: " + string.Join(", ", array1));
+            Console.WriteLine("Array2: " + string.Join(", ", array2));
+            // Modify array2
+            array2[0] = 10;
+            Console.WriteLine("\n Reference Types After change:");
+            Console.WriteLine("Array1: " + string.Join(", ", array1)); // Both array1 and array2 reference the same array in memory
+            Console.WriteLine("Array2: " + string.Join(", ", array2));
 
 
 
@@ -109,6 +125,55 @@ namespace CSharpBasic
         }
 
 
+
+
+        /// <summary>
+        /// String is reference type, but it behaves somewhat like a value type due to its immutability. 
+        /// </summary>
+        public static void CheckPerfomanceStringTypeDemo()
+        {
+            // immutability example
+            string str1 = "Hello";
+            string str2 = str1;
+            Console.WriteLine("Before change:");
+            Console.WriteLine("Str1: " + str1);
+            Console.WriteLine("Str2: " + str2);
+
+            // Modify str2
+            str2 = "World";
+            Console.WriteLine("\nAfter change:");
+            Console.WriteLine("Str1: " + str1); 
+            Console.WriteLine("Str2: " + str2);
+
+
+
+            // PERFOMANCE NOTE: 
+            //  Every time you concatenate strings, a new string object is created, and the old ones are discarded -> not good for perfomance
+            //  StringBuilder class is designed to handle situations where strings need to be modified frequently. String interpolation is base on StringBuilder.
+            int iterations = 10000;
+            // String Concatenation
+            Stopwatch stopwatch1 = Stopwatch.StartNew();
+            string result = "";
+            for (int i = 0; i < iterations; i++)
+            {
+                result += "abc";
+            }
+            stopwatch1.Stop();
+            Console.WriteLine($"String Concatenation Time: {stopwatch1.ElapsedMilliseconds} ms");
+
+            // StringBuilder
+            Stopwatch stopwatch2 = Stopwatch.StartNew();
+            StringBuilder stringBuilder = new StringBuilder();
+            for (int i = 0; i < iterations; i++)
+            {
+                stringBuilder.Append("abc");
+            }
+            result = stringBuilder.ToString();
+            stopwatch2.Stop();
+            Console.WriteLine($"StringBuilder Time: {stopwatch2.ElapsedMilliseconds} ms");
+
+
+        }
         #endregion
 
     }
