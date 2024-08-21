@@ -142,7 +142,7 @@ namespace CSharpBasic
             // Modify str2
             str2 = "World";
             Console.WriteLine("\nAfter change:");
-            Console.WriteLine("Str1: " + str1); 
+            Console.WriteLine("Str1: " + str1);
             Console.WriteLine("Str2: " + str2);
 
 
