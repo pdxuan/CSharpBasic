@@ -1,4 +1,5 @@
-﻿using Microsoft.VisualBasic;
+﻿using CSharpBasic.Delegate;
+using Microsoft.VisualBasic;
 using System;
 using System.Buffers.Text;
 using System.Drawing;
@@ -18,9 +19,9 @@ namespace CSharpBasic
             Console.WriteLine("Hello, World!");
 
             // Lesson1: CSharp type system and Datatypes
-            DataTypeDemo.DataTypesDemo();
-            DataTypeDemo.DoTypeSystemDemo();
-            DataTypeDemo.CheckPerfomanceStringTypeDemo();
+            //DataTypeDemo.DataTypesDemo();
+            //DataTypeDemo.DoTypeSystemDemo();
+            //DataTypeDemo.CheckPerfomanceStringTypeDemo();
 
             // Lesson2: Operator, Expressions & Control structures
 
@@ -34,14 +35,25 @@ namespace CSharpBasic
 
 
             // Lesson5: Exception handling
+            ExceptionHandlerDemo.DoExceptionDemo();
+
 
 
             // Lesson6: Stream & File
 
 
             // Lesson7: Reflection & Attribute 
-            ReflectionAndAttributeDemo.RefelectionUsesesDemo();
-            ReflectionAndAttributeDemo.DoReflectionAndAttributeDemo();
+            //ReflectionAndAttributeDemo.RefelectionUsesesDemo();
+            //ReflectionAndAttributeDemo.DoReflectionAndAttributeDemo();
+
+
+
+            // Other concepts
+            //OtherConceptsDemo.LockKeywordDemo();
+
+
+            // Delegate & Func
+            //DelegateDemo.CompareDelegateAndFuncDemo();
 
         }
 
