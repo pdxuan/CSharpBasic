@@ -24,11 +24,12 @@ namespace CSharpBasic
             //DataTypeDemo.CheckPerfomanceStringTypeDemo();
 
             // Lesson2: Operator, Expressions & Control structures
-            ControlStructureDemo.LeetCodeDemo();
+            //ControlStructureDemo.LeetCodeDemo();
 
 
             // Lesson3: Class, Objects & Methods, Functions  
 
+            MethodAndFunction.DoMethodAndFunctionDemo();
 
 
             // Lesson4: Fundamental datastructure: Array & List, Dictionary & Hashset
