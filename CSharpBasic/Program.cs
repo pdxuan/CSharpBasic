@@ -24,7 +24,7 @@ namespace CSharpBasic
             //DataTypeDemo.CheckPerfomanceStringTypeDemo();
 
             // Lesson2: Operator, Expressions & Control structures
-
+            ControlStructureDemo.LeetCodeDemo();
 
 
             // Lesson3: Class, Objects & Methods, Functions  
@@ -35,7 +35,7 @@ namespace CSharpBasic
 
 
             // Lesson5: Exception handling
-            ExceptionHandlerDemo.DoExceptionDemo();
+            //ExceptionHandlerDemo.DoExceptionDemo();
 
 
 
@@ -54,6 +54,10 @@ namespace CSharpBasic
 
             // Delegate & Func
             //DelegateDemo.CompareDelegateAndFuncDemo();
+
+
+
+
 
         }
 

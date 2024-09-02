@@ -73,23 +73,67 @@ namespace CSharpBasic
         }
 
 
-
-
-        /// <summary>
-        /// How to use delegate in real senariors
-        /// Different beetween Delegate, Action  and Func 
-        /// </summary>
-        public static void DelegateDemo()
+        public static void OperatorOverloadingDemo()
         {
+            var set1 = new CustomSet<int>(new[] { 1, 2, 3, 4 });
+            var set2 = new CustomSet<int>(new[] { 3, 4, 5, 6 });
 
+            var unionSet = set1 + set2; // Union of set1 and set2
+            var differenceSet = set1 - set2; // Difference of set1 and set2
 
-
+            Console.WriteLine("Union: " + unionSet); // Output: {1, 2, 3, 4, 5, 6}
+            Console.WriteLine("Difference: " + differenceSet); // Output: {1, 2}
         }
+
+
+
+
+
+        
     }
 }
 
 
 
+
+/// <summary>
+/// For Operator Overloading demo 
+/// </summary>
+/// <typeparam name="T"></typeparam>
+public class CustomSet<T>
+{
+    private readonly HashSet<T> _elements;
+
+    public CustomSet(IEnumerable<T> elements)
+    {
+        _elements = new HashSet<T>(elements);
+    }
+
+    // Overload the + operator for union of two sets
+    public static CustomSet<T> operator +(CustomSet<T> set1, CustomSet<T> set2)
+    {
+        return new CustomSet<T>(set1._elements.Union(set2._elements));
+    }
+
+    // Overload the - operator for difference of two sets
+    public static CustomSet<T> operator -(CustomSet<T> set1, CustomSet<T> set2)
+    {
+        return new CustomSet<T>(set1._elements.Except(set2._elements));
+    }
+
+    public override string ToString()
+    {
+        return "{" + string.Join(", ", _elements) + "}";
+    }
+}
+
+
+
+
+
+/// <summary>
+/// For lock demo 
+/// </summary>
 public class BankAccount
 {
     private decimal balance;
