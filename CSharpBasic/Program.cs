@@ -16,7 +16,6 @@ namespace CSharpBasic
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
 
             // Lesson1: CSharp type system and Datatypes
             //DataTypeDemo.DataTypesDemo();
@@ -28,11 +27,14 @@ namespace CSharpBasic
 
 
             // Lesson3: Class, Objects & Methods, Functions  
-
-            MethodAndFunction.DoMethodAndFunctionDemo();
+            //MethodAndFunction.DoMethodAndFunctionDemo();
 
 
             // Lesson4: Fundamental datastructure: Array & List, Dictionary & Hashset
+            CollectionDemo.DoListDemo();
+            CollectionDemo.HashsetDemo();
+
+
 
 
             // Lesson5: Exception handling
@@ -41,6 +43,7 @@ namespace CSharpBasic
 
 
             // Lesson6: Stream & File
+            //FileIO.FileIODemo();
 
 
             // Lesson7: Reflection & Attribute 

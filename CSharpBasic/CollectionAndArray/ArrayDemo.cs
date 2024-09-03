@@ -47,7 +47,6 @@ namespace CSharpBasic
             jaggedArray[1] = [0, 2, 4, 6];
             jaggedArray[2] = [11, 22];
 
-
         }
 
 
