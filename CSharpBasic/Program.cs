@@ -31,8 +31,8 @@ namespace CSharpBasic
 
 
             // Lesson4: Fundamental datastructure: Array & List, Dictionary & Hashset
-            CollectionDemo.DoListDemo();
-            CollectionDemo.HashsetDemo();
+            //CollectionDemo.DoListDemo();
+            //CollectionDemo.HashsetDemo();
 
 
 
@@ -58,6 +58,12 @@ namespace CSharpBasic
 
             // Delegate & Func
             //DelegateDemo.CompareDelegateAndFuncDemo();
+
+
+            // Thread & Async Programing
+            //MultipleThreadAndParallel.CreateNewThread();
+
+            MultipleThreadAndParallel.AsyncAwaitDemo();
 
 
 
